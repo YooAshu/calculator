@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NumButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="theme">@style/Base.Theme.Calculator</item>
+        <item name="android:background">@drawable/round_corner_gradient2</item>
+        <item name="android:onClick">numButtonClick</item>
+<!--        <item name="android:textAlignment">center</item>-->
+
+    </style><style name="OpButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="theme">@style/Base.Theme.Calculator</item>
+        <item name="android:background">@drawable/round_corner_gradient2</item>
+        <item name="android:onClick">opButtonClick</item>
+<!--        <item name="android:textAlignment">center</item>-->
+
+    </style>
+    <style name="ButtonRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+
+</resources>

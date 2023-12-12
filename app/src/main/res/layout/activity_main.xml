@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#212121"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context=".MainActivity">
+
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        app:flexDirection="column"
+        app:justifyContent="center"
+        app:alignItems="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="#88a273"
+        >
+
+
+        <TextView
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/orbitron_medium"
+            android:gravity="bottom|end"
+            android:text=""
+            android:textColor="#020000"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            tools:visibility="visible"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/orbitron_medium"
+            android:gravity="end|center_vertical"
+            android:text=""
+            android:textColor="#9E020000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:visibility="visible"
+            android:paddingHorizontal="10dp"/>
+
+
+
+
+
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ASGHAR HUSSAIN"
+        android:textSize="10sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        tools:visibility="visible">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/linearLayout1"
+            style="@style/ButtonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:justifyContent="space_around">
+
+            <Button
+                style="@style/OpButton"
+                android:onClick="allClearButton"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:textColor="@color/white"
+                android:background="@drawable/round_corner_gradient"
+                android:text="@string/AC" />
+
+            <Button
+                style="@style/OpButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:onClick="clearToLeft"
+                android:text="@string/clear" />
+
+            <Button
+
+                style="@style/OpButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="/" />
+
+            <!--                <Button-->
+            <!--                    style="@style/Button"-->
+            <!--                    android:text="=" />-->
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/linearLayout2"
+            style="@style/ButtonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:justifyContent="space_around">
+
+            <Button
+
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                android:text="7" />
+
+            <Button
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="8" />
+
+            <Button
+
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="9" />
+
+            <Button
+
+                style="@style/OpButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="*" />
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/linearLayout3"
+            style="@style/ButtonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:justifyContent="space_around">
+
+            <Button
+
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                android:text="4" />
+
+            <Button
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="5" />
+
+            <Button
+
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="6" />
+
+            <Button
+
+                style="@style/OpButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="-" />
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/linearLayout4"
+            style="@style/ButtonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:justifyContent="space_around">
+
+            <Button
+
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                android:text="1" />
+
+            <Button
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="2" />
+
+            <Button
+
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="3" />
+
+            <Button
+
+                style="@style/OpButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="+" />
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/linearLayout5"
+            style="@style/ButtonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:justifyContent="space_around">
+
+            <Button
+
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                android:text="0" />
+
+            <Button
+                style="@style/NumButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="." />
+
+            <Button
+
+                style="@style/OpButton"
+                android:layout_width="170dp"
+                android:onClick="equalButton"
+                android:layout_height="70dp"
+                android:textColor="@color/white"
+                android:background="@drawable/round_corner_gradient"
+
+                android:text="=" />
+
+            <!--            <Button-->
+
+            <!--                style="@style/Button"-->
+            <!--                android:layout_width="70dp"-->
+            <!--                android:layout_height="70dp"-->
+            <!--                android:text="/" />-->
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

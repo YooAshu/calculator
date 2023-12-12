@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="result">Result</string>
+    <string name="AC">AC</string>
+    <string name="clear">&#x232B;</string>
+
+</resources>
