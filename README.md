@@ -34,7 +34,7 @@ To use the calculator, simply download and install the application on your devic
 
 ## Installation
 
-1. Download the installer from [link].
+1. Download the installer from [https://github.com/YooAshu/calculator/raw/master/app-release.apk].
 2. Run the installer and follow the on-screen instructions.
 3. Launch the calculator app after installation.
 
