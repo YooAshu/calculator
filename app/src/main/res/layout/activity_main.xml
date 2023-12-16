@@ -27,34 +27,47 @@
         >
 
 
-        <TextView
-            android:id="@+id/inputText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:fontFamily="@font/orbitron_medium"
-            android:gravity="bottom|end"
-            android:text=""
-            android:textColor="#020000"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            tools:visibility="visible"
-            android:paddingHorizontal="10dp"/>
+
+
+
+            <TextView
+                android:id="@+id/inputText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="0.5"
+                android:fontFamily="@font/orbitron_medium"
+                android:gravity="bottom|end"
+                android:text=""
+                android:textColor="#020000"
+                android:textStyle="bold"
+                tools:visibility="visible"
+                android:paddingHorizontal="10dp"
+                android:maxLines="1"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="35sp"
+                app:autoSizeMinTextSize="15sp"
+                app:autoSizeStepGranularity="1sp"/>
+
+
 
         <TextView
 
             android:id="@+id/resultText"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:layout_weight="0.5"
             android:fontFamily="@font/orbitron_medium"
             android:gravity="end|center_vertical"
             android:text=""
             android:textColor="#9E020000"
-            android:textSize="25sp"
             android:textStyle="bold"
             tools:visibility="visible"
-            android:paddingHorizontal="10dp"/>
+            android:paddingHorizontal="10dp"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="35sp"
+            app:autoSizeMinTextSize="15sp"
+            app:autoSizeStepGranularity="1sp"/>
 
 
 

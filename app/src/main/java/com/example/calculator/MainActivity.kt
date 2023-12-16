@@ -4,10 +4,13 @@ import android.media.AudioAttributes
 import android.media.SoundPool
 import android.os.Build
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.TextViewCompat
 import com.notkamui.keval.Keval
 
 
@@ -23,11 +26,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var canAddDecimal = true
     private var showResult = false
     private var resetInput = false
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var inputText:TextView = findViewById<TextView>(R.id.inputText)
+        var resultText:TextView = findViewById<TextView>(R.id.resultText)
 
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(inputText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(resultText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+
+//        inputText.setMovementMethod(new ScrollingMovementMethod())
+//         inputText.movementMethod = ScrollingMovementMethod.getInstance()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val audioAttributes = AudioAttributes.Builder()
@@ -57,11 +68,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var inputText:TextView
     lateinit var resultText:TextView
 
+
     fun allClearButton(v: View?){
         soundPool.play(soundId1, 0.7f, 0.7f, 1, 0, 1.0f)
 
         inputText = findViewById<TextView>(R.id.inputText)
         resultText = findViewById<TextView>(R.id.resultText)
+        //TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(inputText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+       // TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(resultText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
         inputText.text = ""
         resultText.text = ""
         canAddOperator = false
@@ -74,6 +88,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     fun numButtonClick(view: View){
 
         inputText = findViewById<TextView>(R.id.inputText)
+        resultText = findViewById<TextView>(R.id.resultText)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(inputText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(resultText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
         if (view is Button){
 
             soundPool.play(soundId1, 0.7f, 0.7f, 1, 0, 1.0f)
@@ -101,6 +118,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun opButtonClick(view:View){
+        inputText = findViewById<TextView>(R.id.inputText)
+        resultText = findViewById<TextView>(R.id.resultText)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(inputText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(resultText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
 
         if (view is Button && canAddOperator){
             soundPool.play(soundId1, 0.7f, 0.7f, 1, 0, 1.0f)
@@ -114,6 +135,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun equalButton(v: View?){
+
         soundPool.play(soundId2, 0.7f, 0.7f, 1, 0, 1.0f)
         inputText = findViewById<TextView>(R.id.inputText)
         resultText = findViewById<TextView>(R.id.resultText)
@@ -129,6 +151,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun clearToLeft(v: View?){
+        inputText = findViewById<TextView>(R.id.inputText)
+        resultText = findViewById<TextView>(R.id.resultText)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(inputText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(resultText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
         soundPool.play(soundId1, 0.7f, 0.7f, 1, 0, 1.0f)
         var expressionLength = inputText.text.length
         if(expressionLength>0){
@@ -138,6 +164,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun evaluateAuto(){
+        inputText = findViewById<TextView>(R.id.inputText)
+        resultText = findViewById<TextView>(R.id.resultText)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(inputText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(resultText,15,35,1,TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
         if (showResult){
             inputText = findViewById<TextView>(R.id.inputText)
             resultText = findViewById<TextView>(R.id.resultText)
